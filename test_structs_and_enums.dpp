@@ -1,0 +1,25 @@
+@include "io.d"
+
+enum Status:
+    Idle,
+    Running,
+    Finished
+end
+
+struct Player:
+    str name = "Unknown"
+    int hp = 100
+    int score = 0
+end
+
+currentStatus = Status.Running
+
+if currentStatus == Status.Running:
+    io.readline.print("Game Status: Running")
+end
+
+p1 = Player()
+p1.name = "Moey"
+p1.score = 500
+
+io.readline.print("Player: ", p1.name, " Score: ", p1.score)

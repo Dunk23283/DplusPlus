@@ -1,0 +1,21 @@
+@include "io.d"
+
+a = 10
+b = 5
+
+if a > b:
+    io.readline.print("a is greater than b")
+else if a < b:
+    io.readline.print("a is less than b")
+else:
+    io.readline.print("a is equal to b")
+io.end
+
+score = 85
+if score >= 90:
+    io.readline.print("Grade: A")
+else if score >= 80:
+    io.readline.print("Grade: B")
+else:
+    io.readline.print("Grade: C")
+end

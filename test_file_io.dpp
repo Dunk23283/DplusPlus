@@ -1,0 +1,25 @@
+@include "io.d"
+@include "FileUtils.d"
+
+// Create & Write to file
+file.write("test_file.txt", "Hello from D++ File System!")
+io.readline.print("File created & written")
+
+// Read content
+content = file.read("test_file.txt")
+io.readline.print("Read Content: ", content)
+
+// Check existence
+io.readline.print("File exists: ", file.exists("test_file.txt"))
+
+// Create directory
+folder.mkdir("test_dir")
+file.write("test_dir/nested.txt", "Nested file content")
+
+// List folder contents
+items = folder.dir("test_dir")
+io.readline.print("Folder contents: ", items)
+
+// Cleanup
+file.delete("test_file.txt")
+folder.delete("test_dir")

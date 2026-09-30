@@ -1,0 +1,48 @@
+@include "io.d"
+@include "math.d"
+@include "FileUtils.d"
+
+// 1. Primitive Variables & Modulo
+const APP_NAME = "D++ Ecosystem Test"
+version = 1.0
+moduloRes = 17 % 5
+
+io.readline.print("=== ", APP_NAME, " v", version, " ===")
+io.readline.print("17 % 5 = ", moduloRes)
+
+// 2. Maps & Sets
+user = { "name": "Moey", "role": "Lead Developer" }
+user["status"] = "Active"
+
+tags = set(["fast", "native", "easy"])
+tags.add("closed-source")
+
+io.readline.print("User Role: ", user["role"])
+io.readline.print("Tags Count: ", tags.length)
+
+// 3. Lambdas & Closures
+factor = 5
+multiplier = funct(x):
+    return x * factor
+end
+
+io.readline.print("Closure Multiplier 8 * 5 = ", multiplier(8))
+
+// 4. File I/O
+folder.mkdir("demo_folder")
+file.write("demo_folder/sample.txt", "D++ File System Test Successful!")
+
+content = file.read("demo_folder/sample.txt")
+io.readline.print("Read File Content: ", content)
+
+// Cleanup
+file.delete("demo_folder/sample.txt")
+folder.delete("demo_folder")
+
+// 5. Async / Await
+async funct runAsyncTask():
+    return "Async Execution Done!"
+end
+
+asyncResult = await runAsyncTask()
+io.readline.print("Async Status: ", asyncResult)

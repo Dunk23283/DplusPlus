@@ -1,0 +1,11 @@
+@include "io.d"
+
+a = 10
+b = 5
+
+io.readline.print(a == b)
+io.readline.print(a != b)
+io.readline.print(a > b)
+io.readline.print(a < b)
+io.readline.print(a >= b)
+io.readline.print(a <= b)

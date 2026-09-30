@@ -1,0 +1,21 @@
+@include "io.d"
+
+str names = ["Moey", "Ali", "Adam"]
+
+io.readline.print("First name: ", names[0])
+io.readline.print("Total names: ", names.length)
+
+names.add("Dennis")
+io.readline.print("New length: ", names.length)
+
+io.readline.print("--- Loop through names ---")
+for name in names:
+    io.readline.print("Hello, ", name)
+io.end
+
+io.readline.print("--- Countdown loop ---")
+count = 3
+while count > 0:
+    io.readline.print("Counting down: ", count)
+    count = count - 1
+io.end

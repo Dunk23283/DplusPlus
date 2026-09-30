@@ -1,0 +1,15 @@
+@include "io"
+@include "math"
+@include "system"
+
+// Standard Input Test
+name = "Moey"
+country = "United States"
+
+io.readline.print("Name: ", name)
+io.readline.print("Country: ", country)
+
+// File system test with renamed 'system' header
+file.write("strict_test.txt", "Strict Header System Working")
+io.readline.print("File Content: ", file.read("strict_test.txt"))
+file.delete("strict_test.txt")

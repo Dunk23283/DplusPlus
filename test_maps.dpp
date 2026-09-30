@@ -1,0 +1,24 @@
+@include "io.d"
+
+// Declare Map / Dictionary
+user = { "name": "Moey", "role": "Lead Developer", "version": "1.0" }
+
+io.readline.print("Map: ", user)
+io.readline.print("User Name: ", user["name"])
+
+// Access & Mutate Map keys
+user["role"] = "Architect & Lead Developer"
+user["country"] = "United States"
+
+io.readline.print("Updated Role: ", user["role"])
+io.readline.print("Map Length: ", user.length)
+io.readline.print("Map Contains 'country': ", user.contains("country"))
+
+// Map Keys and Values
+io.readline.print("Keys: ", user.keys())
+io.readline.print("Values: ", user.values())
+
+// Loop through Map keys
+for key in user.keys():
+    io.readline.print("Key [", key, "] => ", user[key])
+end

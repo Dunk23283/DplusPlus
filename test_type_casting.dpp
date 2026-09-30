@@ -1,0 +1,15 @@
+@include "io.d"
+@include "string.d"
+
+// Method 1: Function call style
+num1 = int("42") + 8
+io.readline.print("Function cast: ", num1)
+
+// Method 2: Keyword operator 'as'
+num2 = "100" as int + 20
+strVal = 50 as str
+io.readline.print("as cast: ", num2, " (string: ", strVal, ")")
+
+// Method 3: C-Style parenthesized cast
+num3 = (int)"15" * 2
+io.readline.print("C-style cast: ", num3)

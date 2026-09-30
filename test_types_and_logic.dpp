@@ -1,0 +1,18 @@
+@include "io.d"
+
+int age = 14
+float score = 99.5
+bool isActive = true
+str name = "Ada"
+
+io.readline.print("Name: ", name, ", Age: ", age)
+
+if age >= 10 and not score < 50:
+    io.readline.print("Eligible for advanced tier")
+else:
+    io.readline.print("Standard tier")
+io.end
+
+numStr = "42"
+numInt = int(numStr) + 8
+io.readline.print("Casted result: ", numInt)

@@ -1,0 +1,58 @@
+@include "io.d"
+
+// 1. Function Overloading
+funct greet():
+    io.readline.print("Hello!")
+io.end
+
+funct greet(name):
+    io.readline.print("Hello, ", name)
+io.end
+
+greet()
+greet("Moey")
+
+// 2. Lambdas & Closures
+factor = 10
+multiply = funct(x):
+    return x * factor
+end
+
+io.readline.print("Closure Multiply 5 * 10 = ", multiply(5))
+
+// 3. Sets
+uniqueTags = set(["dpp", "cpp", "dpp", "language"])
+uniqueTags.add("fast")
+io.readline.print("Set contains 'cpp': ", uniqueTags.contains("cpp"))
+io.readline.print("Set Length: ", uniqueTags.length)
+
+// 4. Interface & Struct Operator Overloading
+interface Printable:
+    funct printDetails()
+end
+
+struct Vector2D:
+    x = 10
+    y = 20
+
+    funct operator+(other):
+        res = Vector2D()
+        res.x = x + other.x
+        res.y = y + other.y
+        return res
+    end
+end
+
+v1 = Vector2D()
+v2 = Vector2D()
+v3 = v1 + v2
+io.readline.print("Vector Sum X: ", v3.x, " Y: ", v3.y)
+
+// 5. Async / Await
+async funct fetchData():
+    io.readline.print("Async task complete!")
+    return "Data Payload"
+end
+
+result = await fetchData()
+io.readline.print("Result: ", result)

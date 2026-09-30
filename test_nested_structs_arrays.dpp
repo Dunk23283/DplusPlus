@@ -1,0 +1,19 @@
+@include "io"
+
+struct Vector3:
+    float x
+    float y
+    float z
+end
+
+struct Player:
+    int health
+    Vector3 pos
+    uint8 inventory[16]
+end
+
+io.readline.print("sizeof(Vector3): ", sizeof(Vector3))
+io.readline.print("sizeof(Player): ", sizeof(Player))
+io.readline.print("alignof(Player): ", alignof(Player))
+io.readline.print("offsetof(Player, pos): ", offsetof(Player, pos))
+io.readline.print("offsetof(Player, inventory): ", offsetof(Player, inventory))

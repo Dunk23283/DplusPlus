@@ -1,0 +1,18 @@
+@include "io.d"
+
+const MAX_SCORE = 100
+str optionalVal = null
+
+funct greet(name = "Guest"):
+    io.readline.print("Hello, ", name)
+io.end
+
+greet()
+greet("Moey")
+
+str text = "hello dpp"
+io.readline.print("Upper: ", text.upper())
+
+str names = ["Moey", "Ada", "Dennis"]
+io.readline.print("Contains Ada: ", names.contains("Ada"))
+io.readline.print("Joined: ", names.join(", "))

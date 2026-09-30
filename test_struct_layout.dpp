@@ -1,0 +1,23 @@
+@include "io"
+
+struct Player:
+    int health = 0
+    int armor = 0
+    uint8 team = 0
+end
+
+Player p = Player()
+Player* ptr = &p
+
+ptr->health = 100
+ptr->armor = 50
+ptr->team = 1
+
+io.readline.print("sizeof(Player): ", sizeof(Player))
+io.readline.print("alignof(Player): ", alignof(Player))
+io.readline.print("offsetof(Player, health): ", offsetof(Player, health))
+io.readline.print("offsetof(Player, armor): ", offsetof(Player, armor))
+io.readline.print("offsetof(Player, team): ", offsetof(Player, team))
+io.readline.print("ptr->health: ", ptr->health)
+io.readline.print("ptr->armor: ", ptr->armor)
+io.readline.print("ptr->team: ", ptr->team)

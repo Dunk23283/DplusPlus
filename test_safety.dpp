@@ -1,0 +1,6 @@
+@include "io"
+@include "memory"
+
+int* p = memory.alloc(4)
+memory.free(p)
+memory.free(p)

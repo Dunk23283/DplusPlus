@@ -1,0 +1,9 @@
+@include "io.d"
+
+greeting = "Hello"
+name = "Ada"
+
+full = greeting + ", " + name
+
+io.readline.print(full)
+io.readline.print("Value: " , full)

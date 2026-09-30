@@ -1,0 +1,14 @@
+@include "io"
+@include "memory"
+
+int* buffer = memory.alloc(40)
+
+buffer[0] = 10
+buffer[1] = 20
+buffer[2] = 30
+
+io.readline.print("Index 0: ", buffer[0])
+io.readline.print("Index 1: ", buffer[1])
+io.readline.print("Index 2: ", buffer[2])
+
+memory.free(buffer)

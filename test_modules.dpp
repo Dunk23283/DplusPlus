@@ -1,0 +1,17 @@
+@include "io.d"
+
+module Game:
+    funct start():
+        io.readline.print("Game session started!")
+    io.end
+
+    score = 100
+io.end
+
+namespace Engine.Physics:
+    gravity = 9.8
+end
+
+Game.start()
+io.readline.print("Current Score: ", Game.score)
+io.readline.print("Gravity: ", Engine.Physics.gravity)

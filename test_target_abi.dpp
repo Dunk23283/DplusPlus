@@ -1,0 +1,9 @@
+@include "io"
+
+struct Player:
+    int health
+    void* ptr
+end
+
+io.readline.print("sizeof(Player): ", sizeof(Player))
+io.readline.print("alignof(Player): ", alignof(Player))

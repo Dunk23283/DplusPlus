@@ -1,0 +1,19 @@
+@include "io"
+
+union Data:
+    int i
+    float f
+    uint bits
+end
+
+packed struct Header:
+    byte type
+    int length
+    short flags
+end
+
+io.readline.print("sizeof(Data): ", sizeof(Data))
+io.readline.print("alignof(Data): ", alignof(Data))
+io.readline.print("sizeof(Header): ", sizeof(Header))
+io.readline.print("alignof(Header): ", alignof(Header))
+io.readline.print("offsetof(Header, length): ", offsetof(Header, length))
